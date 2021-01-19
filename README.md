@@ -6,6 +6,12 @@
 
 Playlist is a batch processing tool for playlists, songs and users.
 
+1. If you try to add a new playlist with same id then it will be discarded
+2. Remove playlist operation executed last. If you have add and delete playlist actions then it will be created firstthen deleted before writing to output file
+3. Adding songs to playlist action happens only both song and playlist exist
+4. If the format of the files are wrong then program will exit with the proper error message.
+
+
 ## Quick Run
 If you want a quick run please follow below commands. Otherwise jump to [Installation](https://github.com/ecaglar/Playlist/blob/main/README.md#installation) section
 
@@ -37,6 +43,54 @@ For example, if you cloned the project under */home/playlist* then the jar file 
 ```bash
  /home/playlist/target/playlist-0.0.1-SNAPSHOT.jar
  ```
+ 
+## Change file format
+
+Change file is simply a json file looks very smiler to original input file. Basically, playlist add, playlist remove and song add actions defined.
+**Add** and **Remove** actions are defined under **Playlist** field. 
+
+```json
+{
+  "playlists" : {
+    "add" : [
+      {
+        "id" : "4",
+        "user_id" : "2",
+        "song_ids" : [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "id" : "5",
+        "user_id" : "3",
+        "song_ids" : [
+          "11",
+          "14",
+          "16"
+        ]
+      }
+    ],
+    "remove":["1","5"]
+  },
+  "songs" : [
+    {
+      "song_id":"2",
+      "playlist_id" : "4"
+    },
+    {
+      "song_id":"35",
+      "playlist_id" : "5"
+    },
+    {
+      "song_id":"35",
+      "playlist_id" : "6"
+    }
+  ]
+}
+
+```
+
 ## Usage
 
 You should provide three files to the batch tool.
