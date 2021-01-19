@@ -3,7 +3,7 @@
 Playlist is a batch processing tool for playlists, songs and users.
 
 ## Quick Run
-If you want a quick run please follow below commands. Otherwise jump to [Installation]() section
+If you want a quick run please follow below commands. Otherwise jump to [Installation](https://github.com/ecaglar/Playlist/blob/main/README.md#installation) section
 
 ```
 mkdir playlistApp
