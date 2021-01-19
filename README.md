@@ -1,6 +1,6 @@
 ![I was lucky enough to know what was Winamp](https://cdn.theatlantic.com/thumbor/4z2POkjuJrgRnOXLyL9-ttxFJmA=/570x243/media/img/posts/2013/12/winamp/original.jpg)
 
-> I was lucky enough to know what was Winamp :)
+> I was lucky enough to know what is Winamp :)
 
 # Batch Playlist Tool
 
@@ -60,7 +60,7 @@ Still, there is room for improvement especially with extremely large inut files 
 
 Instead of creating all interim data structures in the memory, we can leverage a better streaming solution such as [Kafka](https://kafka.apache.org/) and [KTable](https://www.confluent.io/blog/kafka-streams-tables-part-1-event-streaming) which also fits into the problem segment. Once memory usage is minimized the next question will be the high throughput. Below is the proposed solution for extremly large files and high throughput needs. 
 
-
+![Scale](https://github.com/ecaglar/Playlist/blob/main/Scale2.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
