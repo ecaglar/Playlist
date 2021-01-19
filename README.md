@@ -2,31 +2,48 @@
 
 Playlist is a batch processing tool for playlists, songs and users.
 
+## Quick Run
+If you want a quick run please follow below commands. Otherwise jump to Installation section
+
+```
+mkdir playlistApp
+cd /playlistApp
+git clone https://github.com/ecaglar/Playlist.git
+mvn package
+cd /target
+java -jar playlist-0.0.1-SNAPSHOT.jar --input-file-name=../mixtape.json --change-file-name=../changes.json --output-file-name=../output.json
+cd ..
+```
+
 ## Installation
 
-Use the [Maven](https://maven.apache.org/) to compile and install Playlist.
+Use  [Git](https://git-scm.com/) to clone repository to your local
+
+```bash
+git clone https://github.com/ecaglar/Playlist.git
+```
+
+Use  [Maven](https://maven.apache.org/) to compile and install Playlist.
 
 ```bash
 mvn package
 ```
-By default, the jar file will be located under /target folder in your project folder.
-For example, if you cloned the project under /home/playlist then the jar fiel will be located at
+By default, the jar file will be located under /target folder in your project folder after executing the command.
+For example, if you cloned the project under /home/playlist then the jar file will be located at
 ```bash
  /home/playlist/target/playlist-0.0.1-SNAPSHOT.jar
  ```
 ## Usage
 
 You should provide three files to the batch tool.
-1. Mix input file
-2. Change file
-3. Output file
+1. --input-file-name (Mix input file)
+2. --change-file-name (Change file)
+3. --output-file-name (Output file)
 
 (Inside same directory with jar file)
 
-
-
 ```bash
-  java -jar playlist-0.0.1-SNAPSHOT.jar --input-file=[path_to_input_file] --change-file-name=[path-to-change_file] --output-file-name=[path_to_output_file]
+  java -jar playlist-0.0.1-SNAPSHOT.jar --input-file-name=[path_to_input_file] --change-file-name=[path-to-change_file] --output-file-name=[path_to_output_file]
 ```
 
 ## Contributing
