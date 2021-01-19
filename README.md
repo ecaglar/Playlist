@@ -28,17 +28,19 @@ Use  [Maven](https://maven.apache.org/) to compile and install Playlist.
 ```bash
 mvn package
 ```
-By default, the jar file will be located under /target folder in your project folder after executing the command.
-For example, if you cloned the project under /home/playlist then the jar file will be located at
+By default, the jar file will be located under */target* folder in your project folder after executing the command.
+For example, if you cloned the project under */home/playlist* then the jar file will be located at
 ```bash
  /home/playlist/target/playlist-0.0.1-SNAPSHOT.jar
  ```
 ## Usage
 
 You should provide three files to the batch tool.
+```
 1. --input-file-name (Mix input file)
 2. --change-file-name (Change file)
 3. --output-file-name (Output file)
+```
 
 (Inside same directory with jar file)
 
