@@ -37,10 +37,10 @@ public class PlaylistApplication implements ApplicationRunner {
     String inputChangeFile = null;
     String outputFile = null;
 
-    if (args.containsOption("input-file")) {
-      inputMixFile = args.getOptionValues("input-file").get(0);
+    if (args.containsOption("input-file-name")) {
+      inputMixFile = args.getOptionValues("input-file-name").get(0);
     } else {
-      LOG.error("Missing --input-file argument! Closing the application");
+      LOG.error("Missing --input-file-name argument! Closing the application");
       applicationContext.close();
     }
     if (args.containsOption("change-file-name")) {
