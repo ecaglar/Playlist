@@ -108,7 +108,7 @@ You should provide three files to the batch tool.
 
 ## Scaling
 
-The current version of the program can deal with large files as it streams the file instead of reading it all into the memory. This produces a min memory usage footprint. Besides streaming, it also applies changes directly on top of original data structures without creating another set of interim data structures just for the change file. Generating the output file also works as same way with streams. GSON Streaming library has been used to maximize performance. 
+The current version of the program can **deal with large files as it streams the file instead of reading it all into the memory**. This produces a min memory usage footprint. Besides streaming, it also applies changes directly on top of original data structures without creating another set of interim data structures just for the change file. Generating the output file also works as same way with streams. GSON Streaming library has been used to maximize performance. 
 
 Still, there is room for improvement especially with extremely large input files or for a real-time solution. Since we already use streaming for a file instead of reading them into the memory at once, we can focus on improving the interim data structures we create and their memory consumption.
 
