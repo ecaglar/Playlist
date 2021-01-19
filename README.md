@@ -52,13 +52,13 @@ You should provide three files to the batch tool.
   java -jar playlist-0.0.1-SNAPSHOT.jar --input-file-name=[path_to_input_file] --change-file-name=[path-to-change_file] --output-file-name=[path_to_output_file]
 ```
 
-##Scaling
+## Scaling
 
 Current version of the program can deal with large files as it streams the file instead of reading all into the memory. This produces a min memory usage footprint. Beside streaming, it also applies changes directly on top of original data structures without creating another set of interim data structures just for change file. Generating the output file also works as same way with streams. GSON Streaming library has been used to maximize performance. 
 
 Still, there is room for improvement especially with extremely large inut files or for a real time solution. Since we already use streaming for file instead of reading them into the memory at once, we can focus on improving the interim data structures we create and their memory consuption.
 
-Instead of creating all interim data structures in the memory, we can leverage a better streaming solution such as Kafka and KTable which also fits into the problem segment. Once memory usage is minimized the next question will be the high throughput. Below is the proposed solution for extremly large files and high throughput needs. 
+Instead of creating all interim data structures in the memory, we can leverage a better streaming solution such as [Kafka](https://kafka.apache.org/) and [KTable](https://www.confluent.io/blog/kafka-streams-tables-part-1-event-streaming) which also fits into the problem segment. Once memory usage is minimized the next question will be the high throughput. Below is the proposed solution for extremly large files and high throughput needs. 
 
 
 
