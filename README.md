@@ -1,4 +1,4 @@
-# Playlist
+# Batch Playlist Tool
 
 Playlist is a batch processing tool for playlists, songs and users.
 
